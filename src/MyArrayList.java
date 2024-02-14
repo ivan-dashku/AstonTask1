@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class MyArrayList<E> {
+public class MyArrayList<E> implements SimpleList<E> {
 
     private int initialCapacity;
     private E[] array;
@@ -32,6 +32,13 @@ public class MyArrayList<E> {
         return false;
     }
 
+    @Override
+    public void Clear() {
+        array = (E[])new Objects[0];
+
+    }
+
+
     public boolean remove(Object o) {
         for (int i = size(); i > 0 ; i--) {
             if (array[i] == o) {
@@ -43,9 +50,6 @@ public class MyArrayList<E> {
         return true;
     }
 
-    public void clear() {
-        array = (E[])new Objects[0];
-    }
 
     public E get(int index) {
         return array[index];

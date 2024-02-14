@@ -51,7 +51,7 @@ public class MainTest {
         MyArrayList array = new MyArrayList();
         array.add(1);
         array.add(2);
-        array.clear();
+        array.Clear();
         assertEquals(0, array.size());
     }
 
